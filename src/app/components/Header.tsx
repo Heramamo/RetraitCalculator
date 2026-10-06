@@ -1,13 +1,14 @@
 import logo from '@/assets/images/logos.png'
+import { moderateSclae, scale } from '@/utils/responsive'
 import { Image } from 'expo-image'
 import { StyleSheet, Text, View } from 'react-native'
 const Header = () => {
   return (
     <View style={style.container}>
-      <Image source={logo} style={{width:50, height:50}} resizeMode="contain"/>
+      <Image source={logo} style={{width:scale(50), height:scale(50)}} resizeMode="contain"/>
       <View>
-        <Text style={{fontSize:20}}>Retraits</Text>
-        <Text style={{fontSize:12}}>Calculateur</Text>
+        <Text style={{fontSize:moderateSclae(20)}}>Retraits</Text>
+        <Text style={{fontSize:moderateSclae(12)}}>Calculateur</Text>
       </View>
     </View>
   )

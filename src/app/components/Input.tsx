@@ -1,10 +1,13 @@
 import { moderateSclae, scale, verticaleScale } from '@/utils/responsive';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { Text, TextInput, View } from 'react-native';
 import Operator from './Operator';
-
-const Input = () => {
-    const [value, setValue] = useState("")
+interface Props{
+    value:string,
+    setValue:Dispatch<SetStateAction<string>>
+}
+const Input = ({value, setValue}:Props) => {
+ 
     const [operator, setOperator] = useState(1)
       const formatAmount = (text: string) => {
     const cleanNumber = text.replace(/[^0-9]/g, ''); 

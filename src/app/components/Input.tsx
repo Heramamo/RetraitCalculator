@@ -5,7 +5,7 @@ import Operator from './Operator';
 
 const Input = () => {
     const [value, setValue] = useState("")
-    const [operator, setOperator] = useState("")
+    const [operator, setOperator] = useState(1)
       const formatAmount = (text: string) => {
     const cleanNumber = text.replace(/[^0-9]/g, ''); 
     return cleanNumber.replace(/\B(?=(\d{3})+(?!\d))/g, ' '); 

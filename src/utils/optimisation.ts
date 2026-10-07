@@ -1,4 +1,5 @@
-import { Operateur, Palier, Plan } from "@/types/retrait";
+import { Operateur, Palier, Plan, Retrait } from "@/types/retrait";
+
 
 
 const pgcd = (a: number, b: number): number => (b === 0 ? a : pgcd(b, a % b));
@@ -38,17 +39,21 @@ export const optimiseWithdrawal = (total: number, operator: Operateur): Plan | n
             }
         }
     }
-
     if (cout[n] === Infinity) return null;
-
-    const montants: number[] = [];
+      const retraits: Retrait[] = [];
     let rest = n;
     while (rest > 0) {
-        const x = choice[rest];
-        if (x <= 0) return null;
-        montants.push(x * pas);
-        rest -= x;
-    }
+    const x = choice[rest];
+    if (x <= 0) return null;
 
-    return { montants: montants.sort((a, b) => a - b), fraisTotal: cout[n] };
+    const montant = x * pas;
+    const frais = OneWithdrawal(montant, operator.paliers);
+    if (frais === null) return null;
+
+    retraits.push({ montant, frais });
+    rest -= x;
+  }
+
+   retraits.sort((a, b) => a.montant - b.montant); 
+    return {retraits, fraisTotal: cout[n] };
 };

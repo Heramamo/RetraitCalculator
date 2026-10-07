@@ -1,18 +1,21 @@
 import { moderateSclae, scale, verticaleScale } from '@/utils/responsive';
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { Text, TextInput, View } from 'react-native';
 import Operator from './Operator';
 interface Props{
     value:string,
     setValue:Dispatch<SetStateAction<string>>
+    setOperator:Dispatch<SetStateAction<number>>
+    operator:number
 }
-const Input = ({value, setValue}:Props) => {
- 
-    const [operator, setOperator] = useState(1)
-      const formatAmount = (text: string) => {
+  export const formatAmount = (text: string) => {
     const cleanNumber = text.replace(/[^0-9]/g, ''); 
     return cleanNumber.replace(/\B(?=(\d{3})+(?!\d))/g, ' '); 
   };
+const Input = ({value, setValue, operator,setOperator}:Props) => {
+ 
+    
+  
   return (
     <View style={{padding:10}}>
       <Text style={{fontSize: moderateSclae(25), paddingHorizontal:scale(10), paddingVertical:verticaleScale(5)}}>Combien voulez-vous retirer ?</Text>
@@ -23,7 +26,7 @@ const Input = ({value, setValue}:Props) => {
                 <Text style={{fontSize:moderateSclae(20)}}>Ar</Text>
             </View>
       </View>
-      <Operator setOperator={setOperator}/>
+      <Operator setOperator={setOperator} operator={operator}/>
     </View>
   )
 }

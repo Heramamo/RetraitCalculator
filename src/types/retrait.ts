@@ -1,5 +1,10 @@
 export type Palier = { min: number; max: number; frais: number };
 
+export type Retrait = {
+  montant: number;
+  frais: number;
+};
+
 export type Operateur = {
   id: number;
   nom: string;
@@ -7,6 +12,6 @@ export type Operateur = {
 };
 
 export type Plan = {
-  montants: number[];
+   retraits: Retrait[];
   fraisTotal: number;
 };

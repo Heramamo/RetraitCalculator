@@ -7,14 +7,15 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 interface Props {
     setOperator: Dispatch<SetStateAction<number>>
+    operator:number
 }
-const Operator = ({ setOperator }: Props) => {
+const Operator = ({ setOperator, operator }: Props) => {
     const OPTIONS: { id: number, label: string, operator: string, image:any, borderColor:string }[] = [
         { id: 1, label: 'MVola', operator: 'Yas', image:mvola, borderColor:"#047857" },
         { id: 2, label: 'Orange Money', operator: 'Orange', image:orange, borderColor:"#EA580C" },
         { id: 3, label: 'Airtel Money', operator: 'Airtel', image:airtel, borderColor:"#93000A" },
     ]
-    const [selectedId, setSelectedId] = useState(0)
+    const [selectedId, setSelectedId] = useState(1)
     return (
         <View style={style.container}>
             

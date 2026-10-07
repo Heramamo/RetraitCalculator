@@ -12,7 +12,7 @@ const Header = () => {
       </TouchableOpacity>
       <View>
         <Text style={{fontSize:moderateSclae(20)}}>Retraits</Text>
-        <Text style={{fontSize:moderateSclae(12)}}>Calculateur</Text>
+        <Text style={{fontSize:moderateSclae(12)}}>Calculator</Text>
       </View>
     </View>
   )

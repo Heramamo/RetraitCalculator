@@ -26,7 +26,7 @@ const SelectOperator = ({ operator, setOperator }: Props) => {
                     <Image source={selected.image} style={{ width: scale(32), height: scale(32) }} resizeMode="contain" />
                     <Text style={[style.selectText, { color: selected.borderColor }]}>{selected.label}</Text>
                 </View>
-                <AntDesign name={open ? 'caretup' : 'caretdown'} size={moderateSclae(14)} color={selected.borderColor} />
+                <AntDesign name={open ? 'caret-up' : 'caret-down'} size={moderateSclae(14)} color={selected.borderColor} />
             </TouchableOpacity>
 
             {open && (

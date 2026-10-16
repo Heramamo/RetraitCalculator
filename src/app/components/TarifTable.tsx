@@ -11,8 +11,8 @@ const format = (n: number) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
 
 const TarifTable = ({ operator }: Props) => {
     const option = getOperatorOption(operator)
-    const paliers = (op
-        ?? operateurs[0]).paliers
+    const found = operateurs.find(o => o.id === operator) ?? operateurs[0]
+    const paliers = found.paliers
 
     return (
         <View style={style.container}>

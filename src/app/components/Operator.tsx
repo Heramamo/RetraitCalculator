@@ -1,6 +1,4 @@
-import airtel from "@/assets/images/airtel.png"
-import mvola from "@/assets/images/mvola.png"
-import orange from "@/assets/images/orange.png"
+import { OPERATOR_OPTIONS } from "@/data/operators"
 import { moderateSclae, scale, verticaleScale } from '@/utils/responsive'
 import { Dispatch, SetStateAction, useState } from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
@@ -10,11 +8,7 @@ interface Props {
     operator:number
 }
 const Operator = ({ setOperator, operator }: Props) => {
-    const OPTIONS: { id: number, label: string, operator: string, image:any, borderColor:string }[] = [
-        { id: 1, label: 'MVola', operator: 'Yas', image:mvola, borderColor:"#047857" },
-        { id: 2, label: 'Orange Money', operator: 'Orange', image:orange, borderColor:"#EA580C" },
-        { id: 3, label: 'Airtel Money', operator: 'Airtel', image:airtel, borderColor:"#93000A" },
-    ]
+    const OPTIONS = OPERATOR_OPTIONS
     const [selectedId, setSelectedId] = useState(1)
     return (
         <View style={style.container}>

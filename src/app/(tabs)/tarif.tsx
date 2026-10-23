@@ -1,9 +1,10 @@
+import { getOperatorOption } from '@/data/operators'
+import { moderateSclae, scale, verticaleScale } from '@/utils/responsive'
+import { Entypo } from '@expo/vector-icons'
 import { useState } from 'react'
 import { ScrollView, Text, View } from 'react-native'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
-import { moderateSclae, scale, verticaleScale } from '@/utils/responsive'
-import { getOperatorOption } from '@/data/operators'
-import { Entypo } from '@expo/vector-icons'
+import Copyright from '../components/Copyright'
 import Header from '../components/Header'
 import SelectOperator from '../components/SelectOperator'
 import TarifTable from '../components/TarifTable'
@@ -24,6 +25,7 @@ const tarif = () => {
                     <SelectOperator operator={operator} setOperator={setOperator} />
                     <TarifTable operator={operator} />
                     <View style={{ height: verticaleScale(20) }} />
+                    <Copyright />
                 </ScrollView>
             </SafeAreaView>
         </SafeAreaProvider>

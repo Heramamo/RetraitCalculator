@@ -4,17 +4,17 @@
     "slug": "retraitcalculator",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/logo.png",
     "scheme": "retraitkajy",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/images/icon.png"
+      "icon": "./assets/images/logo.png"
     },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#FFFFFF",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "foregroundImage": "./assets/images/logo.png",
+        "monochromeImage": "./assets/images/logo.png"
       },
       "predictiveBackGestureEnabled": false,
       "package": "com.heramamo.Retraitkajy"
@@ -29,7 +29,7 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#FFFFFF",
-          "image": "./assets/images/logos.png",
+          "image": "./assets/images/logo.png",
           "imageWidth": 140
         }
       ]

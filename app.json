@@ -17,7 +17,7 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.heramamo.retraitcalculator"
+      "package": "com.heramamo.Retraitkajy"
     },
     "web": {
       "output": "static",
@@ -41,7 +41,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "b18e8295-20af-4ec1-967a-95cbbb31f95e"
+        "projectId": "d7bbcc12-223b-4c12-a1dd-809c105825c8"
       }
     },
     "owner": "heramamo"

@@ -1,16 +1,18 @@
 import { Dimensions, PixelRatio } from "react-native";
 
-const {width, height} = Dimensions.get("window")
-
 const BASE_WIDTH = 375;
 const BASE_HEIGHT = 812;
 
 export const scale = (size:number)=>{
-    return (width / BASE_WIDTH) * size
+    const { width } = Dimensions.get("window")
+    const factor = Math.min(1.2, Math.max(0.85, width / BASE_WIDTH))
+    return factor * size
 }
 
 export const verticaleScale = (size:number)=>{
-    return (height/BASE_HEIGHT) * size
+    const { height } = Dimensions.get("window")
+    const factor = Math.min(1.1, Math.max(0.85, height / BASE_HEIGHT))
+    return factor * size
 }
 
 export const moderateSclae = (size:number, factor=0.5)=>{

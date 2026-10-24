@@ -36,16 +36,6 @@ export default function TabLayout() {
                         )
                     }
                 } />
-            <Tabs.Screen
-                name="history"
-                options={
-                    {
-                        title: "Historique",
-                        tabBarIcon: ({ size, color }) => (
-                            <MaterialIcons name="history" size={size} color={color} />
-                        )
-                    }
-                } />
         </Tabs>
        
     )
